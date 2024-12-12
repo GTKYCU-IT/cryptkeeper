@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "autoeye"
+description = ""
+version = "1.0.0"
+requires-python = ">=3.12,<4"
+dependencies = ["cryptography"]
+
+[[project.authors]]
+name = "Jadon Calvert"
+email = "calvetjadon@gmail.com"
+
+[project.optional-dependencies]
+dev = ["pytest", "pytest-cov", "build", "debugpy"]
+
+[project.scripts]
+autoeye = "autoeye.cli:main"
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "--cov . --cov-report html --cov-report term-missing --cov-fail-under 95 --ignore=playground"
+testpaths = ["tests"]
+
+[tool.coverage.report]
+exclude_also = ["if __name__ == .__main__.:"]
+
+[tool.coverage.run]
+source = ["src"]
