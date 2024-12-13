@@ -137,8 +137,6 @@ requires-python = ">=3.8"
 cryptkeeper = { git = "https://github.com/GTKYCU-IT/cryptkeeper" }
 ```
 
-Replace the repository URL with the actual URL of your CryptKeeper project.
-
 ## Contributing 🤝
 
 Contributions are welcome! Please submit pull requests or file issues for any bugs or feature requests.
