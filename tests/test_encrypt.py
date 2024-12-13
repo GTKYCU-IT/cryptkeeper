@@ -1,10 +1,19 @@
 from pathlib import Path
 
-from autoeye.crypt import Credential, encrypt
+from autoeye.cli import gen_key
+from autoeye.crypt import Credential, save_credential, load_credential
 
 
 def test_encrypt_decrypt(tmp_path: Path) -> None:
-    crypt_path = tmp_path / "credential.enc"
-    credential = Credential(username="username", password="password")
+    cred_path = tmp_path / "credential.enc"
+    key_path = tmp_path / "secret.key"
 
-    encrypted_bytes = encrypt(credential)
+    gen_key(key_path)
+
+    credential = Credential(username="username", password="password")
+    save_credential(credential, key_path, cred_path)
+
+    assert cred_path.exists()
+
+    decrypted_credential = load_credential(cred_path, key_path)
+    assert decrypted_credential == credential
