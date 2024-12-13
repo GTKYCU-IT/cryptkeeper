@@ -4,8 +4,8 @@ from cryptography.fernet import Fernet
 from getpass import getpass
 from pathlib import Path
 
-from autoeye.credential import Credential
-from autoeye.exceptions import InvalidKeyException
+from cryptkeeper.credential import Credential
+from cryptkeeper.exceptions import InvalidKeyException
 
 
 def gen_key(out_file: Path) -> None:

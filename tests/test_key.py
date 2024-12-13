@@ -1,5 +1,5 @@
 from pathlib import Path
-from autoeye.crypt import gen_key
+from cryptkeeper.crypt import gen_key
 
 
 def test_generate_key(tmp_path: Path):

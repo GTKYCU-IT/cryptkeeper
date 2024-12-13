@@ -1,7 +1,7 @@
 from pathlib import Path
 
-from autoeye.cli import gen_key
-from autoeye.crypt import Credential, save_credential, load_credential
+from cryptkeeper.cli import gen_key
+from cryptkeeper.crypt import Credential, save_credential, load_credential
 
 
 def test_encrypt_decrypt(tmp_path: Path) -> None:

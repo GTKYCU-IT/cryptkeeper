@@ -3,7 +3,7 @@ requires = ["setuptools", "setuptools-scm"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "autoeye"
+name = "cryptkeeper"
 description = ""
 version = "1.0.0"
 requires-python = ">=3.12,<4"
@@ -17,7 +17,7 @@ email = "calvetjadon@gmail.com"
 dev = ["pytest", "pytest-cov", "build", "debugpy"]
 
 [project.scripts]
-autoeye = "autoeye.cli:main"
+cryptkeeper = "cryptkeeper.cli:main"
 
 [tool.pytest.ini_options]
 minversion = "6.0"

@@ -4,8 +4,8 @@ from argparse import ArgumentParser, Namespace
 from enum import Enum
 from pathlib import Path
 
-from autoeye.crypt import save_credential, gen_key, create_credential
-from autoeye.exceptions import InvalidKeyException
+from cryptkeeper.crypt import save_credential, gen_key, create_credential
+from cryptkeeper.exceptions import InvalidKeyException
 
 
 class _Operation(str, Enum):
