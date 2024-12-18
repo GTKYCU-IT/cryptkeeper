@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 name = "cryptkeeper"
 description = ""
 version = "1.0.0"
-requires-python = ">=3.12,<4"
+requires-python = ">=3.11,<4"
 dependencies = ["cryptography"]
 
 [[project.authors]]
